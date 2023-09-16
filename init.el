@@ -1,5 +1,11 @@
 ;;; init.el -*- lexical-binding: t; -*-
 
+(defvar IS-WSL (and (eq system-type 'gnu/linux)
+                    (string-match
+                     "Linux.*Microsoft.*Linux"
+                     (shell-command-to-string "uname -a")))
+
+  "Inside WSL")
 ;; This file controls what Doom modules are enabled and what order they load
 ;; in. Remember to run 'doom sync' after modifying it!
 

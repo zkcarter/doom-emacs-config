@@ -202,4 +202,5 @@
 
        :carter
        ;;lsp-bridge
+       (:if IS-WSL wsl)
        )
